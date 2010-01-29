@@ -102,7 +102,6 @@ ht_sniff_cb(struct tcp_stream *a_tcp, void **pkt)
 	case NIDS_CLOSE:
 	case NIDS_EXITING:
 	case NIDS_RESET:
-	    printf("DERR\n");
 	    if ((connp = a_tcp->user))
 	    {
 		htp_connp_close(connp, tv.tv_usec);
