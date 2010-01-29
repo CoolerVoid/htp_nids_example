@@ -1,0 +1,9 @@
+example01 will display http traffic in an apache like log manner.
+
+Something like:
+
+192.16.55.3 149.174.245.160:80 "GET http://www.reddit.com/ HTTP/1.1" "-" "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_8; en-US) AppleWebKit/532.6 (KHTML, like Gecko) Chrome/4.0.262.0 Safari/532.6"
+196.16.55.3 149.174.245.160:80 "GET http://www.reddit.com/ HTTP/1.1" "-" "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_8; en-US) AppleWebKit/532.6 (KHTML, like Gecko) Chrome/4.0.262.0 Safari/532.6"
+192.16.55.3 72.21.211.161:80 "GET http://thumbs.reddit.com/t3_avun2.png HTTP/1.1" "http://www.reddit.com/" "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_8; en-US) AppleWebKit/532.6 (KHTML, like Gecko) Chrome/4.0.262.0 Safari/532.6"
+
+Whee!
