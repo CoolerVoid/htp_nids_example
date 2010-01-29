@@ -56,6 +56,13 @@ loghdr_cb(htp_connp_t *connp)
 	    referer?referer:"-",
 	    agent?agent:"-");
     
+    if (method) free(method);
+    if (proto) free(proto);
+    if (uri) free(uri);
+    if (referer) free(referer);
+    if (agent) free(agent);
+    if (host) free(host);
+
     return 0;
 }
 
@@ -95,10 +102,11 @@ ht_sniff_cb(struct tcp_stream *a_tcp, void **pkt)
 	case NIDS_CLOSE:
 	case NIDS_EXITING:
 	case NIDS_RESET:
+	    printf("DERR\n");
 	    if ((connp = a_tcp->user))
 	    {
 		htp_connp_close(connp, tv.tv_usec);
-		free(connp);
+		htp_connp_destroy_all(connp);
 	    }
 	    break;
 	case NIDS_DATA:
